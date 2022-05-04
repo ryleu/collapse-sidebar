@@ -1,0 +1,62 @@
+/*collapse the channels list*/
+.sidebar-1tnWFu:not(:hover) {
+  width: 72px;
+  overflow: clip;
+}
+
+/*hide things that won't be visible when collapsed.*/
+.sidebar-1tnWFu:not(:hover) * > .text-2GsXbW::after,
+.sidebar-1tnWFu:not(:hover) * > .children-1MGS9G > *:not(.channelInfo-3jN1ay),
+.sidebar-1tnWFu:not(:hover) * > .name-28HaxV,
+.sidebar-1tnWFu:not(:hover) * > .content-66wMin > *,
+.sidebar-1tnWFu:not(:hover) * > .username-vAneIW,
+.sidebar-1tnWFu:not(:hover) * > .container-YkUktl > *:not(.avatarWrapper-1B9FTW),
+.sidebar-1tnWFu:not(:hover) * > .name-3BUDLf, 
+.sidebar-1tnWFu:not(:hover) * > .children-3MeUvj {
+  visibility: collapse;
+  font-size: 0;
+}
+
+/*remove real "NEW UNREADS" indicator*/
+.sidebar-1tnWFu * > .text-2GsXbW {
+  font-size: 0;
+}
+
+/*add dynamic "NEW UNREADS" indicator.*/
+.sidebar-1tnWFu * > .text-2GsXbW::before {content: "new";}
+.sidebar-1tnWFu * > .text-2GsXbW::after {content: " unreads";}
+.sidebar-1tnWFu * > .text-2GsXbW::before,
+.sidebar-1tnWFu * > .text-2GsXbW::after {
+  font-size: 12px;
+  top: 2px;
+  position: relative;
+}
+
+/* Transitions */
+
+/*sidebar slide*/
+.sidebar-1tnWFu {
+  transition: width 0.2s 0.2s ease;
+}
+
+/*slide in effect*/
+.sidebar-1tnWFu * > .children-1MGS9G,
+.sidebar-1tnWFu * > .text-2GsXbW,
+.sidebar-1tnWFu * > .text-2GsXbW::after,
+.sidebar-1tnWFu * > .name-28HaxV,
+.sidebar-1tnWFu * > .content-66wMin > *,
+.sidebar-1tnWFu * > .listDefault-2F-w65,
+.sidebar-1tnWFu * > .username-vAneIW,
+.sidebar-1tnWFu * > .container-YkUktl > *,
+.sidebar-1tnWFu * > .name-3BUDLf {
+  transition: font-size 0.2s 0.2s ease, padding 0.2s 0.2s ease;
+}
+
+.sidebar-1tnWFu * > .container-YkUktl > *,
+.sidebar-1tnWFu * > .children-3MeUvj {
+  transition: visibility 0.2s 0.2s ease;
+}
+
+.sidebar-1tnWFu:not(:hover) * > .listDefault-2F-w65 {
+  padding-left: 23px;
+}
