@@ -3,7 +3,7 @@
     "description": "makes sidebar (on the left) smaller unless you hover",
     "version": "0.1.0",
     "author": "ryleu#0001",
-    "theme": "index.css",
+    "theme": "/src/index.css",
     "consent": "true",
     "license": "GPL-3.0"
 }
